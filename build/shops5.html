@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>gallary</title>
+<style>
+/* Our Galary Start */
+.gallary{
+    padding: 0px 8% 120px;
+}
+.gallary h3{
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #388b6f;
+    text-shadow: 0px 1px 1px black;
+}
+.gallary-img{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.gallary-img img{
+    max-width: 530px;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.gallary-img img:hover{
+    transform: translateY(-10px);
+}
+@media (max-width:920px){
+    .gallary-img{
+        grid-template-columns: 1fr;
+    }
+    .gallary-img img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}
+/* Our Galary End */
+
+
+.submit{
+    display: inline-block;
+    font-size: 15px;
+    background: #388b6f;
+    color: white;
+    width: 160px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration:none;
+    border-radius:10px;
+    padding: 1% 1%;
+}
+.submit:hover{
+    width: 175px;
+}
+
+
+</style>
+
+<body bgcolor="orange;">
+ <!-- Our Gallary Start -->
+    <div class="gallary">
+        <h3>Our Gallary</h3>
+        <div class="gallary-img">
+            <div class="img1">
+                <h3>Office Design</h3>
+                <img src="./images/g1.png" alt="">
+            </div>
+            <div class="img1">
+                <h3>Hall Design</h3>
+                <img src="./images/g2.png" alt="">
+                <h3>Bed Room Design</h3> 
+                <img src="./images/g3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Our Gallary End --><br>
+<br>
+<center><a href="shops1.html" class="submit">GO BACK</a></center>
+</body>
+</html>

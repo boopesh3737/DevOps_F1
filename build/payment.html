@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    
+ #popup{
+  position:fixed;
+  top:40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:600px;
+  border-radius:10px;
+  padding:50px;
+  box-shadow:0 5px 30px rgba(0,0,0,100);
+  background:yellow;
+  visibility:hidden;
+  opacity:0;
+  transition:0.5s;
+}
+#popup.active{
+  visibility:visible;
+  opacity:1;
+  top:50%;
+  transition:0.5s;
+} 
+</style>
+	
+<title>Order furnitures</title>
+<link rel="stylesheet" type="text/css" href="payment.css">
+</head>
+
+<body bgcolor="lightblue;">
+<header style="color:blue;">
+ 
+<div class="container" id="blur">
+<div class="left">
+<h3 style="color:red;">BILLING SECTION</h3>
+<form>
+Full name
+<input type="text" name="" placeholder="Enter name">
+Email
+<input type="email" name="" placeholder="Enter email">
+
+Address
+<input type="text" name="" placeholder="Enter address">
+				
+City
+<input type="text" name="" placeholder="Enter City">
+<div id="zip">
+<label>
+State
+<select>
+<option>Choose State..</option>
+<option>TamilNadu</option>
+<option>Kerala</option>
+<option>Karnataka</option>
+<option>Andhra pradesh</option>
+</select>
+</label>
+<label>
+Number of Items
+<input type="number" name="" placeholder="Enter the quantity">
+</label>
+</div>
+</form>
+</div>
+
+<div class="right">
+<h3 style="color:red;">PAYMENT</h3>
+<form>
+Accepted Card <br>
+<img src="card1.png" width="100">
+<img src="card2.png" width="50">
+<br><br>
+
+Credit card number
+<input type="text" name="" placeholder="Enter card number">
+				
+
+<div id="zip">
+
+
+</div>
+</form>
+<input type="submit" name="" onclick="toggle()" value="Proceed to Checkout">
+</div>
+</div>
+</header>
+ <div id="popup">
+    <center><h2 style="color:green;">Your Order has been Placed</h2></center>
+    <center><h1 style="color:green;">Successfully!!</h1></center>
+    <p style="color:white"></p>
+    <center><p  style="color:red;">Click for more Orders</p></center>
+    <p style="color:white"></p>
+    <center><a href="shops2.html" onclick="toggle()" id="btn" >OK</a></center>
+  </div>
+<script>
+ function toggle(){
+  var blur=document.getElementById('blur');
+  blur.classList.toggle('active');
+  var popup=document.getElementById('popup');
+  popup.classList.toggle('active');
+}
+</script>
+</body>
+</html>

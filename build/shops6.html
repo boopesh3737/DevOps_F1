@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>cantact</title>
+<style>
+/* Contact Section Start */
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    padding: 100px 8% 120px;
+    background: #f3f3f3;
+}
+.content-text{
+    margin-bottom: 10px;
+}
+.content-text h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0px 1px 1px black;
+}
+.content-text h2 span{
+    color: #388b6f;
+}
+.content-text p{
+    font-weight: bold;
+}
+.list{
+    margin-top: 16px;
+}
+.list li{
+    margin-bottom: 12px;
+}
+.list li a{
+    display: block;
+    color: #388b6f;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+.contact-form form{
+    position: relative;
+}
+.contact-form form input,
+form textarea{
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.contact-form textarea{
+    resize: none;
+    height: 160px;
+}
+.contact-form .submit{
+    display: inline-block;
+    font-size: 15px;
+    background: #388b6f;
+    color: white;
+    width: 160px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.contact-form .submit:hover{
+    width: 175px;
+}
+
+.submit{
+    display: inline-block;
+    font-size: 15px;
+    background: #388b6f;
+    color: white;
+    width: 160px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration:none;
+    border-radius:10px;
+    padding: 1% 1%;
+}
+.submit:hover{
+    width: 175px;
+}
+@media (max-width:920px){
+    .contact{
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
+/* Contact Section End */
+
+#popup{
+  position:fixed;
+  top:40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:600px;
+  border-radius:10px;
+  padding:50px;
+  box-shadow:0 5px 30px rgba(0,0,0,100);
+  background: pink;
+  visibility:hidden;
+  opacity:0;
+  font-family:arial;
+  transition:0.5s;
+}
+#btn{
+    display: inline-block;
+    font-size: 20px;
+    background: #388b6f;
+    color: white;
+    width: 160px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration:none;
+    border-radius:10px;
+    padding: 2% 1%;
+}
+#popup.active{
+  visibility:visible;
+  opacity:1;
+  top:50%;
+  transition:0.5s;
+} 
+</style>
+
+<body>
+<!-- Contact Section Start -->
+    <section class="contact" id="contact">
+        <div class="content-text" id="blur">
+            <h2>Get In <span>Touch</span></h2>
+            <p>If you want to more information fill  the right side form in the page.</p>
+            <p>when you want to know the more informations and more objects in the our webpage.</p>
+            <div class="list">
+                <li><a href="#">+91-72******37</a></li>
+                <li><a href="#">dormabhu@gmail.com</a></li>
+                <li><a href="#">Indian web page</a></li>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="#">
+                <input type="name" placeholder="Name" >
+                <input type="number" placeholder="Phone" >
+                <input type="email" placeholder="Email" >
+                <textarea name="" id="" cols="35" rows="10" placeholder="Message"></textarea>
+                <input type="submit" value="Send" class="submit" onclick="toggle()" required>
+            </form>
+               
+        </div>
+    </section><br>
+<br>
+         
+<div id="popup">
+     <center><h2 style="color:green;">Your message has been Send</h3></center>
+    <center><h1 style="color:darkgreen;">***!!ThankYou!!***</h1></center>
+    
+    
+    <center><h3 style=" color:red;" "font-size:40px ">Have a Nice Day!</h3></center>
+    
+    <center><a href="shops1.ht" onclick="toggle()" id="btn" >OK</a></center>
+  </div>
+<script>
+ function toggle(){
+  var blur=document.getElementById('blur');
+  blur.classList.toggle('active');
+  var popup=document.getElementById('popup');
+  popup.classList.toggle('active');
+}
+</script>
+</body>
+</html>
