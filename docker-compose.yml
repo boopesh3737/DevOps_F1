@@ -4,5 +4,5 @@ services:
 react-capstone:
 image: "react-capstone"
 ports:
-- "81:80"
+- "37:37"
 ---
