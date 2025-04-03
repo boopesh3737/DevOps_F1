@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: test
-        image: boopeshs/final_task
+        image: boopeshs/f_task
         imagePullPolicy: Always
         ports:
         - containerPort: 80
