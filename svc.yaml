@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: test-service  # A valid metadata name
+  name: task_ff  # A valid metadata name
   labels:
-    app: test
+    app: test_f
 spec:
   selector:
-    app: test
+    app: test_f
   ports:
     - name: http
       port: 80         # Service port (external)
